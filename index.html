@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SVG</title>
+</head>
+<body>
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 510 510" width="510" height="510">
+
+    <defs>
+        <linearGradient id="linearGradientFill" x1="0%" y1="0%" x2="50%" y2="50%" spreadMethod="reflect">
+            <stop offset="0%" stop-color="#ddd"></stop>
+            <stop offset="70%" stop-color="#666"></stop>
+        </linearGradient>
+
+        <radialGradient id="radialGradientCircle" cx="55%" cy="55%" r="50%" fx="90%" fy="50%">
+            <stop offset="0%" stop-color="#888"></stop>
+            <stop offset="100%" stop-color="#000"></stop>
+        </radialGradient>
+
+        <pattern id="patternFill" width="20" height="20" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+            <circle cx="10" cy="10" r="7" stroke="black" fill="url(#radialGradientCircle)"></circle>
+        </pattern>
+
+        <radialGradient id="radialGradientFill" cx="150%" cy="135%" r="300%">
+            <stop offset="0%" stop-color="#000"></stop>
+            <stop offset="50%" stop-color="#000"></stop>
+            <stop offset="50%" stop-color="#333"></stop>
+            <stop offset="100%" stop-color="#444"></stop>
+        </radialGradient>
+    </defs>
+
+    <rect x="5" y="5" width="500" height="500" rx="10" ry="10" fill="url(#linearGradientFill)" stroke="black"></rect>
+    <rect x="55" y="55" width="400" height="400" rx="10" ry="10" fill="url(#linearGradientFill)" stroke="black"></rect>
+    <rect x="55" y="55" width="400" height="400" rx="10" ry="10" fill="url(#patternFill)" stroke="black"></rect>
+
+    <path d="M115,120 h280 a 15 15 0 0 1 15 15 v200 a 15 15 0 0 1 -15 15 h-100 v20 h100 v20 h-280 v-20 h100 v-20 h-100
+    a 15 15 0 0 1 -15 -15 v-200 a 15 15 0 0 1 15 -15 m0,15 h280 v200 h-280 Z"
+          fill="url(#linearGradientFill)" stroke="black" fill-rule="evenodd"></path>
+
+    <rect x="115" y="135" width="280" height="200" fill="url(#radialGradientFill)"></rect>
+
+    <path id="textPath" d="M115,210 Q 215 210, 255 250 T 395 290" fill="transparent"></path>
+
+    <text x="70" y="40" fill="#fff"
+          style="
+          font-family: Arial, sans-serif;
+          font-size: 30px;
+          font-weight: bold;">
+
+        <textPath xlink:href="#textPath">IT-Academy</textPath>
+    </text>
+
+    <text x="55" y="42" fill="url(#linearGradientFill)" stroke="black"
+          style="
+          font-family: Arial, sans-serif;
+          font-size: 30px;
+          font-weight: bold;">
+        HOMEWORK
+    </text>
+
+</svg>
+
+
+</body>
+</html>
